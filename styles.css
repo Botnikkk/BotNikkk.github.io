@@ -1,0 +1,663 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+html,body{
+    height: 100%;
+    width: 100vw;
+    margin: 0rem;
+    padding: 0rem;
+    overflow-x:hidden;
+    background-repeat: no-repeat;
+    background-image:url("https://www.pcclean.io/wp-content/uploads/2020/4/6jYbIz.jpg");
+    background-attachment:fixed; 
+    background-size: 100% 100%;
+    background-color: rgba(18,18,18,0.9);
+    background-blend-mode:darken;
+    scroll-behavior:smooth;
+}   
+
+:root{
+    font-size: 62.5%;
+}
+
+
+/*------------------------------------------ANIMATION SECTION-----------------------------------------------------*/
+.hidden{
+    transform: scale(0);
+    filter: blur(5px);
+
+}
+
+.show{
+    transform: scale(1);
+    filter: blur(0);
+}
+
+.projects-hidden{
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translateY(+100%);
+}
+
+.projects-show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.projects-show, .show{
+    transition: all 1.3s ease-in-out;
+}
+/*------------------------------------------ANIMATION SECTION-----------------------------------------------------*/
+
+/*------------------------------------------ASSETS SECTION-----------------------------------------------------*/
+
+.side-bar{
+    border-left: .6rem outset #a861ff;
+    border-radius: .5rem;
+    border-color: #a861ff;
+    background-color: rgba(18,18,18,0.7);
+    width: fit-content;
+    padding: 2rem;
+}
+
+.title{
+    display: block;
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 5rem;
+    color: #a861ff;
+    font-family: 'Raleway', sans-serif;
+    font-weight:lighter;
+    font-size: 6rem;
+    border-bottom: .1rem solid #37d1df;
+}
+
+.home-section ,.about-section, .project-container{
+    display: inline-block;
+}
+
+
+/*------------------------------------------ASSETS SECTION-----------------------------------------------------*/
+
+/*------------------------------------------HOME SECTION-----------------------------------------------------*/
+
+.home-section{
+    margin: 0;
+    width: 100vw;
+    height: 110vh;
+    position:relative;
+}
+
+.home-container{
+    position:absolute;
+    height: fit-content;
+    width: fit-content;
+    margin: 25rem;
+    display: flex;
+}
+
+.main-text-container{
+    padding: 0;
+    margin: 0;
+    display:flexbox;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-content: center;
+} 
+
+.name{
+    display: block;
+    color: #a861ff;
+    font-size: 9rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight:lighter;
+}
+
+.home-text{
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    display: block;
+    color: #a861ff;
+    font-size: 5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight:lighter;
+}
+
+.auto-type{
+    display:inline;
+    border-bottom: .001rem outset #a861ff;
+    color: #37d1df;
+    background-color: #12121263;
+}
+
+.logo{
+    display: block;
+    height: 23rem;
+    aspect-ratio: 1/1;
+    opacity: 0.5;
+    transition-duration: 1s;
+}
+
+.logo:hover{
+    opacity: 1;
+    height: 25rem;
+    transition-duration: 1s;
+}
+
+/*------------------------------------------HOME SECTION-----------------------------------------------------*/
+
+/*------------------------------------------ABOUT SECTION-----------------------------------------------------*/
+
+
+.about-container{
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+}
+
+.about-section{
+    width: 100vw;
+    height: 110vh;
+}
+
+.about-text{
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-align:justify;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    line-height: auto;
+    color: aliceblue;
+    width: 100rem;
+    font-size: 4rem;
+    margin: 5rem;
+    margin-top: 0;
+}
+
+.about-logo{
+    height:30rem;
+    aspect-ratio: 1/1;
+    opacity: 0.5;
+    transition-duration: 1s;
+    border: 1.5rem outset #a861ff;
+    border-radius: 0.5rem;
+}
+
+.about-logo:hover{
+    opacity: 1;
+    height: 31rem;
+    transition-duration: 1s;
+}
+
+/*------------------------------------------ABOUT SECTION-----------------------------------------------------*/
+
+/*------------------------------------------PROJECT SECTION-----------------------------------------------------*/
+
+
+.project-container{
+    height:114vh;
+    width: 100vw;
+}
+
+.grid-container{
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    height: 50rem;
+    width: 160rem;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+}
+
+.proj1{
+    grid-column: 1/3;
+    grid-row:1/2;
+}
+
+.proj2{
+    grid-column: 3/5;
+    grid-row: 1/3;
+}
+
+.proj3{
+    grid-column: 5/7;
+}
+
+.proj4{
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+
+.proj5{
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+
+.image-wrapper{
+    position: relative;
+    background-color: #121212;
+    border:.3rem outset #ff59008a;
+    border-radius:2rem;
+    height:100%;
+    width:100%;
+}
+.image-wrapper:hover > .item{
+    filter:blur(.3rem);
+}
+.image-wrapper:hover > .overlay{
+    opacity: 1;
+}
+
+.item{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    display: block;
+    border:.3rem hidden #ff59008a;
+    border-radius:2rem;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:.1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border:.3rem hidden #ff59008a;
+    border-radius:2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+    opacity: 0;
+}
+
+.icon_list{
+    display: inline;
+}
+
+.icon{
+    float:left;
+    color:whitesmoke;
+    display: flex;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left:2rem;
+    border: .5rem solid black;
+    background-color: black;
+    border-radius: 5rem;
+}
+.icon:hover{
+    cursor:pointer;
+}
+
+.image-wrapper,.item, .overlay{
+    transition: 400ms  ease-in-out;
+}
+
+/*------------------------------------------PROJECT SECTION-----------------------------------------------------*/
+
+/*------------------------------------------FOOTER SECTION-----------------------------------------------------*/
+
+
+.footer {
+    position: fixed;
+    padding: 1rem;
+    padding-left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background: #111111;
+    border-top: .1rem solid #691aca;
+    border-radius: .1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.social-container{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 0;
+    
+}
+.social_icon{
+    display: inline-flex;
+    color:#5c5c5c;
+    font-size: 3rem;
+    align-items: center;
+    transition: all .1s ease-in-out;
+}
+.social_icon:not(.facebook){
+    margin-left: 15rem;
+}
+
+.social_icon:hover{
+    color:black;
+    cursor: pointer;
+    background-color: #5c5c5c;
+    border-radius: 20rem;
+    transition: all .1s ease-in-out;
+}
+
+/*------------------------------------------FOOTER SECTION-----------------------------------------------------*/
+
+/*------------------------------------------HEADER SECTION-----------------------------------------------------*/
+
+.header{
+    align-content: center;
+    padding: 2rem;
+    position: fixed;
+    display: flex;
+    z-index: 99;
+    top:0;
+    width: 96vw;
+    height: 5vh;
+    display: flexbox;
+    background-color:rgba(0, 0, 0, 0.4);
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.header-text{
+    margin-top: -2rem;
+    display: inline-flex;
+    width: 49.5vw;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Caveat', cursive;
+    font-weight: bolder;
+    font-size: 6rem;
+}
+
+.navigation-container{
+    width: 49.5vw;
+    height: 100%;
+    display: inline-flex;
+    justify-content: end;
+    align-content: center;
+}
+
+.nav-icon, .mobile-icon{
+    color: #5c5c5c;
+    margin: 0;
+    display:inline-flex;
+    margin-left: 7rem;
+    font-size: 4rem;
+}
+
+.nav-text{
+    color: #5c5c5c;
+    text-decoration: none;
+    margin: 0;
+    font-size:4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+
+.nav-icon:hover, .nav-icon:hover .nav-text{
+    font-size: 3rem;
+    color: black;
+    background-color: #5c5c5c;
+    border: 1rem solid #5c5c5c;
+    border-radius: 20rem;
+    transition: all 200ms ease-in-out;
+}
+
+.mobile-container{
+    display: none;
+    justify-content: end;
+    width: 49.5vw;
+}
+
+.mobile-icon{
+    display: block;
+    font-size: 5rem
+}
+
+
+
+
+/*------------------------------------------HEADER SECTION-----------------------------------------------------*/
+
+
+@media only screen and (max-width:1600px){
+    :root{
+        font-size: 55%;
+    }
+    
+    .grid-container{
+        height: 60rem;
+        width: 140rem;
+    }
+
+}
+@media only screen and (max-width:1200px){
+    :root{
+        font-size: 43%;
+    }
+    
+    .name{
+        font-size: 7.5rem;
+    }
+
+    .footer{
+        height: 5rem;
+    }
+
+    .social_icon{
+        font-size: 5rem;
+    }
+}
+@media only screen and (max-width:900px){
+    :root{
+        font-size: 40%;
+    }
+
+    .title{
+        font-size: 8rem;
+        padding-bottom: 2rem;
+    }
+    
+    .home-container{
+        margin: 0;
+        margin-top: 5rem;
+        display: block;
+        width: 100vw;
+    }
+
+    .logo{
+        margin: auto;
+        height: 50rem;
+    }
+
+    .logo:hover{
+        height: 55rem;
+    }
+
+    .main-text-container{
+        margin: auto;
+        margin-top: 5rem;
+        display: block;
+    }
+
+    .name{
+        font-size: 11rem;
+    }
+
+    .home-text{
+        font-size: 7rem;
+    }
+
+    .about-container{
+        width: 100vw;
+        display: block;
+    }
+
+    .about-logo{
+        display: block;
+        margin: auto;
+        height: 60rem;
+    }
+
+    .about-logo:hover{
+        height: 61rem;
+    }
+
+    .about-text{
+        display: block;
+        margin: auto;
+    }
+
+
+    .grid-container{
+        display: grid;
+        height: 95rem;
+        width: 100rem;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    .proj3{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+
+    .proj5{
+        grid-column: 3/5;
+        grid-row: 3/4;
+    }
+
+    .mobile-container{
+        display: flex;
+    }
+    
+    .mobile-icon{
+        z-index: 999;
+    }
+
+    .navigation-container{
+        transform: translateX(+100%);
+        z-index: 50;
+        top: 0;
+        left: 0;
+        background-color:#121212;
+        height: 100vh;
+        width:100vw;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transition: all .5s ease-in-out;
+        gap: 10rem;
+    }
+
+    .nav-icon{
+        display:block;
+        font-size: 10rem;
+    }
+
+    .nav-text{
+        font-size: 10rem;
+    }
+
+    .active .navigation-container{
+        transform: translateX(0);
+        transition: all .5s ease-in-out;
+        
+    }
+    
+}
+
+@media only screen and (max-width:600px){
+    :root{
+        font-size: 30%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    :root{
+        font-size: 25%;
+    }
+
+    .home-container{
+        margin-top: 50rem;
+    }
+
+    .project-container{
+        height: 150vh;
+    }
+
+    .grid-container{
+        width: 90rem;
+        height: 130vh;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proj2{
+        grid-column: 1/3;
+        grid-row: 3/5;
+    }
+
+    .proj3{
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+
+    .proj5{
+        grid-column: 1/3;
+        grid-row: 6/7;
+    }
+
+    .overlay{
+        font-size: 8rem;
+    }
+
+    .icon{
+        font-size: 8rem;
+    }
+
+    .footer{
+        height: 10rem;
+    }
+
+    .social_icon{
+        font-size: 10rem;
+    }
+
+    .header-text{
+        font-size: 9rem;
+    }
+
+    .mobile-icon{
+        font-size: 9rem;
+    }
+}
+
+@media only screen and (max-width:400px){
+    :root{
+        font-size: 20%;
+    }
+}
+
+@media only screen and (max-width:320px){
+    :root{
+        font-size: 17%;
+    }
+}
