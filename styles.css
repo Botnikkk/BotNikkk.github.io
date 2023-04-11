@@ -23,30 +23,32 @@ html,body{
 
 /*------------------------------------------ANIMATION SECTION-----------------------------------------------------*/
 .hidden{
-    transform: scale(0);
+    transform : translateY(200px);
+    opacity: 0;
     filter: blur(5px);
 
 }
 
 .show{
-    transform: scale(1);
+    transform : translateY(0);
+    opacity: 1;
     filter: blur(0);
 }
 
 .projects-hidden{
+    transform : translateY(300px);
     opacity: 0;
-    filter: blur(1rem);
-    transform: translateY(+100%);
+    filter: blur(5px);
 }
 
 .projects-show{
+    transform : translateY(0);
     opacity: 1;
     filter: blur(0);
-    transform: translateY(0);
 }
 
 .projects-show, .show{
-    transition: all 1.3s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 /*------------------------------------------ANIMATION SECTION-----------------------------------------------------*/
 
@@ -72,6 +74,7 @@ html,body{
     font-weight:lighter;
     font-size: 6rem;
     border-bottom: .1rem solid #37d1df;
+    padding-top: 15rem;
 }
 
 .home-section ,.about-section, .project-container{
@@ -117,6 +120,7 @@ html,body{
 }
 
 .home-text{
+    text-align: center;
     margin: 0;
     margin-top: 1rem;
     padding: 0;
@@ -408,12 +412,12 @@ html,body{
 }
 
 .nav-icon:hover, .nav-icon:hover .nav-text{
-    font-size: 3rem;
+    font-size: 3.7rem;
     color: black;
     background-color: #5c5c5c;
-    border: 1rem solid #5c5c5c;
+    border: 0.35rem solid #5c5c5c;
     border-radius: 20rem;
-    transition: all 200ms ease-in-out;
+    transition: all 70ms ease-in-out;
 }
 
 .mobile-container{
@@ -479,12 +483,14 @@ html,body{
     }
 
     .logo{
+        opacity: 1;
         margin: auto;
+        padding-top: 20rem;
         height: 50rem;
     }
 
     .logo:hover{
-        height: 55rem;
+        height: 50rem;
     }
 
     .main-text-container{
@@ -507,13 +513,14 @@ html,body{
     }
 
     .about-logo{
+        opacity: 1;
         display: block;
         margin: auto;
         height: 60rem;
     }
 
     .about-logo:hover{
-        height: 61rem;
+        height: 60rem;
     }
 
     .about-text{
@@ -572,6 +579,15 @@ html,body{
         font-size: 10rem;
     }
 
+    .nav-icon:hover, .nav-icon:hover .nav-text{
+        font-size: 10rem;
+        color: black;
+        background-color: #5c5c5c;
+        border: 1rem solid #5c5c5c;
+        border-radius: 20rem;
+        transition: all 200ms ease-in-out;
+    }
+
     .nav-text{
         font-size: 10rem;
     }
@@ -595,12 +611,8 @@ html,body{
         font-size: 25%;
     }
 
-    .home-container{
-        margin-top: 50rem;
-    }
-
     .project-container{
-        height: 150vh;
+        height: 160vh;
     }
 
     .grid-container{
