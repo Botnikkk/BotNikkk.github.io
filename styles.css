@@ -201,6 +201,56 @@ html,body{
 
 /*------------------------------------------ABOUT SECTION-----------------------------------------------------*/
 
+/*------------------------------------------SKILLSET SECTION-----------------------------------------------------*/
+
+.skillset-container{
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+
+    padding: 0;
+}
+
+.skill-icon{
+    font-size: 10rem;
+    text-align: center;
+    margin: 7rem;
+    margin-top:0;
+    display:inline-block;
+    justify-content: center;
+    text-decoration: none;
+    color: #8f43eb;
+}
+
+.skill-text{
+    font-size: 4rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8f43eb;
+}
+
+
+.skill-text:active , .skill-icon:active{
+    text-decoration: none;
+    color: #8f43eb;
+}
+
+.skill-icon:hover, .skill-icon:hover .skill-text{
+    color: #7337bc;
+}
+
+.skillset-section{
+    width: 100vw;
+    height: 110vh;
+}
+
+/*------------------------------------------SKILLSET SECTION-----------------------------------------------------*/
+
 /*------------------------------------------PROJECT SECTION-----------------------------------------------------*/
 
 
@@ -334,22 +384,25 @@ html,body{
     padding: 0;
     
 }
+
 .social_icon{
     display: inline-flex;
     color:#5c5c5c;
-    font-size: 3rem;
+    font-size: 3.5rem;
     align-items: center;
+    background-color: #111111;
+    border-radius: 1rem;
     transition: all .1s ease-in-out;
 }
+
 .social_icon:not(.facebook){
     margin-left: 15rem;
 }
 
 .social_icon:hover{
-    color:black;
+    color:#111111;
     cursor: pointer;
     background-color: #5c5c5c;
-    border-radius: 20rem;
     transition: all .1s ease-in-out;
 }
 
@@ -364,7 +417,7 @@ html,body{
     display: flex;
     z-index: 99;
     top:0;
-    width: 96vw;
+    width: 97.1vw;
     height: 5vh;
     display: flexbox;
     background-color:rgba(0, 0, 0, 0.4);
@@ -399,6 +452,7 @@ html,body{
     display:inline-flex;
     margin-left: 7rem;
     font-size: 4rem;
+
 }
 
 .nav-text{
