@@ -8,10 +8,10 @@ html,body{
     padding: 0rem;
     overflow-x:hidden;
     background-repeat: no-repeat;
-    background-image:url("https://www.pcclean.io/wp-content/uploads/2020/4/6jYbIz.jpg");
+    background-image:url("images/backround.jpg");
     background-attachment:fixed; 
     background-size: 100% 100%;
-    background-color: rgba(18,18,18,0.9);
+    background-color: rgba(18,18,18,0.7);
     background-blend-mode:darken;
     scroll-behavior:smooth;
 }   
@@ -173,7 +173,7 @@ html,body{
     justify-content: center;
     text-align: center;
     align-items: center;
-    text-align:justify;
+    text-align :start;
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     line-height: auto;
@@ -187,7 +187,7 @@ html,body{
 .about-logo{
     height:30rem;
     aspect-ratio: 1/1;
-    opacity: 0.5;
+    opacity: 0.7;
     transition-duration: 1s;
     border: 1.5rem outset #a861ff;
     border-radius: 0.5rem;
@@ -195,7 +195,7 @@ html,body{
 
 .about-logo:hover{
     opacity: 1;
-    height: 31rem;
+    height: 32rem;
     transition-duration: 1s;
 }
 
@@ -519,6 +519,10 @@ html,body{
     }
 }
 @media only screen and (max-width:900px){
+    html,body {
+        background-image:url("images/backround-900.jpg");
+    }
+
     :root{
         font-size: 40%;
     }
@@ -655,12 +659,16 @@ html,body{
 }
 
 @media only screen and (max-width:600px){
+    html,body {
+        background-image:url("images/backround-500.jpg");
+    }
     :root{
         font-size: 30%;
     }
 }
 
 @media only screen and (max-width:500px){
+
     :root{
         font-size: 25%;
     }
