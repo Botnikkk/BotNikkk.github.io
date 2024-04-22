@@ -353,9 +353,9 @@ html,body{
 }
 
 .button {
-    padding: 1px 6px;
-    border: 1px outset;
-    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    border: 0.2rem outset;
+    border-radius: 3rem;
     text-decoration: none;
     background-color: black;
     color: rgb(214, 214, 214);
