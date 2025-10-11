@@ -24,7 +24,9 @@ html,body{
     justify-items: center;
 }
 
-
+.section-title{
+    display: block;
+}
 /* HEADER SECTION */
 
 .header{
