@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# BotNikkk - Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/) [![Status](https://img.shields.io/badge/Status-Active-success?style=flat)](https://github.com/Botnikkk) [![Deployment](https://img.shields.io/badge/Deployment-Live-orange?style=flat)](https://botnikkk.github.io/BotNikkk)
 
-## Available Scripts
+This repository contains the source code for my personal portfolio website. Originally built with vanilla HTML/JS, it has been ported to a modern **React.js** architecture to demonstrate component-based development and cleaner state management.
 
-In the project directory, you can run:
+**Live URL:** [BotNikkk Portfolio 🔗](https://botnikkk.github.io/BotNikkk)
 
-### `npm start`
+## 🌟 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The primary goal of this website is to serve as my digital resume and a central hub for my projects. It showcases my journey as an IT Engineering student, highlighting my technical skillset, software development projects, and contributions to the open-source community.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> "A programmer, student, and learner combining technical expertise with innovative thinking."
 
-### `npm test`
+## ✨ Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Dynamic Typing Animation:** Features a smooth auto-typing introduction using `typed.js`.
+* **Component-Based Architecture:** Modularized code structure (Header, About, Skills, Projects) for better maintainability.
+* **Project Showcase:** A responsive grid layout displaying my latest work (games, bots, and websites) with direct links to GitHub repositories and live demos.
+* **Interactive Mobile Navigation:** A custom-built responsive navigation bar with a hamburger menu state managed via React Hooks.
+* **Visual Skillset:** A graphical representation of my tech stack (Flutter, Java, Python, React, etc.).
+* **Direct Social Integration:** Quick-access links to LinkedIn, GitHub, and Email with one-click clipboard copying.
 
-### `npm run build`
+## 📄 Website Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application is structured as a Single-Page Application (SPA) with the following sections:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Home:** Landing section with a dynamic intro and quick social links.
+* **About:** A brief professional bio and introduction.
+* **Skillset:** A visual grid of languages and frameworks I work with.
+* **Projects:** The core portfolio section displaying highlighted repositories like *NikkksBlackJack*, *XP BOT*, and *Cheena Makeover*.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+* **Framework:** **React.js** (v18+)
+* **Styling:** **Custom CSS3** (Responsive Grid & Flexbox)
+* **Libraries:**
+    * `typed.js` (Text animations)
+    * `react-icons` (Vector icons)
+* **State Management:** React Hooks (`useState`, `useEffect`, `useRef`)
+* **Deployment:** GitHub Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📧 Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Nikhil Chaudhary**
+* LinkedIn: [@nikhil-chaudhary](https://www.linkedin.com/in/nikhil-chaudhary-85a275269)
+* GitHub: [@Botnikkk](https://github.com/Botnikkk)
+* Email: b.nikk.chd@gmail.com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/Botnikkk/BotNikkk.github.io](https://github.com/Botnikkk/BotNikkk.github.io)
