@@ -48,4 +48,4 @@ The application is structured as a Single-Page Application (SPA) with the follow
 * GitHub: [@Botnikkk](https://github.com/Botnikkk)
 * Email: b.nikk.chd@gmail.com
 
-Project Link: [https://github.com/Botnikkk/BotNikkk.github.io](https://github.com/Botnikkk/BotNikkk.github.io)
+Project Link: [https://github.com/Botnikkk/BotNikkk.github.io/tree/source](https://github.com/Botnikkk/BotNikkk.github.io/tree/source)
