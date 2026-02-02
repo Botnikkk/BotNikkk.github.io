@@ -150,23 +150,71 @@ html,body{
 
 /* SKILLSET SECTION */
 
-.skillset .main-container{
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5rem;
-    margin-top: 5rem;
-}
-.skillset span{
-    color: var(--TextColor);
-    font-family: var(--TitleText);
-    font-size: 2.5rem;
-}
-.skillset img{
-    aspect-ratio: 1/1;
-    height: 10rem;
+
+.skillset .main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 8rem;
 }
 
+.skillset .skillTitle {
+    color: var(--TextColor);
+    font-family: var(--MainText);
+    font-size: 3rem;
+    white-space: nowrap;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.skillset .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex: 1;
+}
+
+.skillset .skillItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+}
+
+.skillset .section-title {
+    color: var(--TextColor);
+    font-family: var(--TitleText);
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.skillset img {
+    display: block;
+    aspect-ratio: 1/1;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.skillset .skillName {
+    color: var(--TextColor);
+    font-family: var(--MainText);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .skillset .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skillset .skills-list {
+        justify-content: center;
+    }
+}
 /* PROJECTS SECTION */
 
 .projects .main-container{
@@ -310,13 +358,13 @@ html,body{
     }
     .socials{
         height: 8rem;
-        width: 65rem;
+        width: 50rem;
     }
     .socials img{
-        height: 4rem;
+        height: 3rem;
     }
     .socials span{
-        font-size: 1em;
+        font-size: 2rem;
     }
     .projects .section-title, .skillset .section-title{
         font-size: 5rem;
@@ -334,14 +382,17 @@ html,body{
         align-items: center;
     }
     .headerText{
-        font-size: 5rem;
+        font-size: 3rem;
         display: inline-block;
     }
     .header{
         align-content: center;
     }
     .about img{
-        height: 30rem;
+        height: 25rem;
+    }
+    .about a{
+        font-size: 2.5rem
     }
     .mobile-icon{
         z-index: 999;
@@ -353,6 +404,21 @@ html,body{
     .grid-container{
         width: 60rem;
         height: 75rem;
+    }
+    .skillset .main-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .skillset .skillTitle {
+        flex: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .skillset .skills-list {
+        justify-content: center;
     }
     .navigation-container{
         transform: translateX(+100%);
@@ -386,17 +452,15 @@ html,body{
 }
 @media only screen and (max-width:700px){
     .socials{
-        width: 60rem;
+        width: 50rem;
     }
     .socials span{
         color: var(--TextColor);
         font-family: var(--MainText);
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .socials img{
-        aspect-ratio: 1/1;
-        height: 3.5rem;
-        padding: 0  .5rem;
+        height: 3rem;
     }
 }
 @media only screen and (max-width:650px){
@@ -406,7 +470,7 @@ html,body{
         padding-top: 10vh;
     }
     .home .name{
-        font-size: 6rem
+        font-size: 5.5rem
     }
     .skillset .main-container{
         grid-template-rows: repeat(4,1fr);
@@ -437,17 +501,15 @@ html,body{
         grid-row: 6/7;
     }
     .socials{
-        width: 50rem;
+        width: 42rem;
     }
     .socials span{
         color: var(--TextColor);
         font-family: var(--MainText);
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .socials img{
-        aspect-ratio: 1;
-        height: 3rem;
-        padding: 0  .5rem;
+        height: 2.5rem;
     }
 }
 @media only screen and (max-width:500px){
