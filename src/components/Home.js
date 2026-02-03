@@ -25,9 +25,9 @@ const Home = () => {
   return (
     <div id="home" className="home">
       <div className="main-container">
-        <a>Hello! I'm</a>
-        <a className="name">Nikhil Chaudhary</a>
-        <a>A <span className="auto-type" ref={el}></span></a>
+        <p>Hello! I'm</p>
+        <p className="name">Nikhil Chaudhary</p>
+        <p>A <span className="auto-type" ref={el}></span></p>
       </div>
 
       <p className="social-text">Get in touch 👇</p>

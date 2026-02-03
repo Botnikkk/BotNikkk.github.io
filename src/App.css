@@ -78,11 +78,14 @@ html,body{
 
 /* HOME SECTION */
 
-.home a{
+.home p{
     color: var(--TextColor);
     font-family: var(--MainText);
     font-size: 3rem;
     display: block;
+}
+.home a{
+    color: var(--TextColor);
 }
 .home .name{
     font-size: 8rem;
@@ -140,7 +143,7 @@ html,body{
     display: block;
     margin: 3rem;
 }
-.about a{
+.about span{
     color: var(--TextColor);
     display: block;
     font-family: var(--MainText);
@@ -391,7 +394,7 @@ html,body{
     .about img{
         height: 25rem;
     }
-    .about a{
+    .about span{
         font-size: 2.5rem
     }
     .mobile-icon{
