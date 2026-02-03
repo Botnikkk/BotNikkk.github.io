@@ -4,7 +4,7 @@
 
 This repository contains the deployment code for my personal portfolio website. Originally built with vanilla HTML/JS, it has been ported to a modern **React.js** architecture to demonstrate component-based development and cleaner state management.
 
-**Live URL:** [BotNikkk Portfolio 🔗](https://botnikkk.github.io/BotNikkk)
+**Live URL:** [BotNikkk Portfolio 🔗](https://botnikkk.github.io)
 
 ## 🌟 Overview
 
