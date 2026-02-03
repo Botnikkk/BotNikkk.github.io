@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3928b92e.css",
-    "main.js": "/static/js/main.78e4906a.js",
+    "main.css": "/static/css/main.fc5e1472.css",
+    "main.js": "/static/js/main.d8646ea3.js",
     "static/js/453.5652f7a4.chunk.js": "/static/js/453.5652f7a4.chunk.js",
     "static/media/blackjack.png": "/static/media/blackjack.f1b90c48492a79b801c7.png",
     "static/media/backround.jpg": "/static/media/backround.7ecd00bc1659fc859886.jpg",
@@ -27,12 +27,12 @@
     "static/media/css.svg": "/static/media/css.e2464eba05b257910f6fe3399bdb3aca.svg",
     "static/media/html.svg": "/static/media/html.50dfb7630f504b04b5d4cd134619fe3c.svg",
     "static/media/flutter.svg": "/static/media/flutter.83219c099347619051f3aa0fa0e2108e.svg",
-    "main.3928b92e.css.map": "/static/css/main.3928b92e.css.map",
-    "main.78e4906a.js.map": "/static/js/main.78e4906a.js.map",
+    "main.fc5e1472.css.map": "/static/css/main.fc5e1472.css.map",
+    "main.d8646ea3.js.map": "/static/js/main.d8646ea3.js.map",
     "453.5652f7a4.chunk.js.map": "/static/js/453.5652f7a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3928b92e.css",
-    "static/js/main.78e4906a.js"
+    "static/css/main.fc5e1472.css",
+    "static/js/main.d8646ea3.js"
   ]
 }
