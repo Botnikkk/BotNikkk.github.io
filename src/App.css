@@ -221,8 +221,6 @@
 
 
     /* PROJECTS SECTION */
-
-
     .projects .main-container {
         width: 90vw;
         max-width: 1400px;
@@ -273,13 +271,15 @@
         flex-direction: column;
         width: 60%;
         color: var(--TextColor);
+        align-items: flex-start;
+        text-align: left;
     }
     .card-header {
-        color: var(--TextColor);
-        display: flex;
+       display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 0.5rem;
+        align-items: center;
+        width: 100%;
+        
     }
     .project-title {
         font-family: var(--TitleText);
@@ -302,9 +302,9 @@
         color: #6eabda;
     }
     .github-icon {
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: WHITE;
-        opacity: 0.7;
+        opacity: 0.8;
         transition: opacity 0.5s;
     }
     .github-icon:hover {
