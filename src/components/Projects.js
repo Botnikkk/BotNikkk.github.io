@@ -7,6 +7,14 @@ const Projects = () => {
 
   const projectData = [
     {
+      title: "Naadnetra",
+      img: require("./Images/Projects/naadnetra.png"),
+      github: "https://github.com/Botnikkk/naadnetra",
+      link: "https://botnikkk.github.io/naadnetra",
+      description: "A cross-platform app that detects AI-cloned voices in real time during phone calls, using a Flutter client and a FastAPI backend.",
+      tags: ["Flutter", "Python", "FastAPI", "WebRTC"],
+    },
+    {
       title: "Client Portfolio",
       img: require("./Images/Projects/cheenaMakeover.png"),
       github: "https://github.com/Botnikkk/cheena-makeover",
