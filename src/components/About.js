@@ -1,19 +1,41 @@
 import React from 'react';
+import { IoSchool, IoLocation } from 'react-icons/io5';
+import { profile } from '../data';
 
-const About = () => {
-  return (
-    <div id="about" className="about">
-      <div className="main-container">
-        <img src={require('./Images/pfp.jpg')} alt="Profile" />
-        <span>
-        Motivated Computer Science student with hands-on
-        experience in several programming languages. A proactive
-        problem-solver, passionate about building quality software
-        and thriving in collaborative team environments.
-        </span>
+const About = () => (
+  <section id="about" className="about section">
+    <div className="container">
+      <h2 className="section-title">About</h2>
+
+      <div className="about-grid">
+        <div className="about-text">
+          {profile.about.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
+          {profile.personalNote && <p>{profile.personalNote}</p>}
+        </div>
+
+        <ul className="facts">
+          <li>
+            <IoSchool aria-hidden="true" />
+            <div>
+              <strong>{profile.education}</strong>
+              <span>
+                {profile.college} · {profile.years}
+              </span>
+            </div>
+          </li>
+          <li>
+            <IoLocation aria-hidden="true" />
+            <div>
+              <strong>{profile.location}</strong>
+              <span>Based in</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default About;
