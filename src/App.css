@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
+/* colors, fonts and sizes live here so they're easy to change in one place */
 :root {
   --bg: #050d18;
   --surface: #0a1a2b;
@@ -15,7 +16,7 @@
   --font-title: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --header-h: 80px;
+  --header-h: 80px; /* used for the section offset below too */
 }
 
 html {
@@ -32,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Background: pure CSS grid + soft glows */
+/* the grid lines + blue glow in the background, all css so theres no image to load */
 body::before {
   content: '';
   position: fixed;
@@ -76,6 +77,7 @@ main:focus {
   outline: none;
 }
 
+/* hides text visually but screen readers still read it */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -102,7 +104,7 @@ main:focus {
   top: 1rem;
 }
 
-/* ---------- Layout ---------- */
+/* layout */
 .container {
   width: min(1120px, 100% - 3rem);
   margin-inline: auto;
@@ -110,7 +112,7 @@ main:focus {
 
 .section {
   padding: 7rem 0;
-  scroll-margin-top: var(--header-h);
+  scroll-margin-top: var(--header-h); /* so the fixed header doesnt cover the title after clicking a nav link */
 }
 
 .section-title {
@@ -128,7 +130,7 @@ main:focus {
   max-width: 60ch;
 }
 
-/* ---------- Reveal on scroll (projects only) ---------- */
+/* fade up on scroll, js adds .is-visible (only the project cards use it) */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -139,7 +141,7 @@ main:focus {
   transform: none;
 }
 
-/* ---------- Buttons ---------- */
+/* buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -180,7 +182,7 @@ main:focus {
   gap: 0.9rem;
 }
 
-/* ---------- Header ---------- */
+/* header */
 .header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -201,7 +203,7 @@ main:focus {
   border-bottom-color: var(--border);
 }
 .header.menu-open {
-  /* backdrop-filter would trap the fixed full-screen menu inside the header */
+  /* blur has to be off while the menu is open, otherwise the fullscreen menu gets stuck inside the header */
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   background: var(--bg);
@@ -214,6 +216,7 @@ main:focus {
   text-decoration: none;
   letter-spacing: 0.02em;
 }
+/* the < /> around the logo is just css */
 .logo::before {
   content: '<';
   color: var(--muted);
@@ -240,6 +243,7 @@ main:focus {
 .nav a.active {
   color: var(--text);
 }
+/* underline that slides in on hover / active link */
 .nav a:not(.nav-cta)::after {
   content: '';
   position: absolute;
@@ -255,6 +259,7 @@ main:focus {
 .nav a.active::after {
   transform: scaleX(1);
 }
+/* contact link looks like a button */
 .nav .nav-cta {
   padding: 0.55rem 1.3rem;
   border: 1px solid var(--accent);
@@ -266,6 +271,7 @@ main:focus {
   background: var(--accent);
   color: var(--on-accent);
 }
+/* hamburger, hidden on desktop (shows up in the 900px media query) */
 .menu-toggle {
   display: none;
   background: none;
@@ -276,13 +282,14 @@ main:focus {
   line-height: 0;
 }
 
-/* ---------- Hero ---------- */
+/* hero */
 .home {
   min-height: 100svh;
   display: flex;
   align-items: center;
   padding-top: calc(var(--header-h) + 3rem);
 }
+/* text left, photo right */
 .hero {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -307,6 +314,7 @@ main:focus {
   font-size: 1rem;
   margin-bottom: 1.6rem;
 }
+/* the little green dot */
 .status-dot {
   width: 0.6rem;
   height: 0.6rem;
@@ -320,6 +328,7 @@ main:focus {
   line-height: 1.02;
   font-weight: 700;
   letter-spacing: -0.02em;
+  /* gradient text */
   background: linear-gradient(100deg, var(--text) 30%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -345,7 +354,8 @@ main:focus {
   box-shadow: 0 0 0 10px rgba(110, 172, 218, 0.06), 0 30px 60px -20px rgba(0, 0, 0, 0.6);
 }
 
-/* ---------- About ---------- */
+/* about */
+/* text on the left, facts on the right */
 .about-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -394,7 +404,8 @@ main:focus {
   line-height: 1.5;
 }
 
-/* ---------- Skills ---------- */
+/* skills */
+/* one row per skill group */
 .skill-rows {
   border-top: 1px solid var(--border);
 }
@@ -441,7 +452,7 @@ main:focus {
   object-fit: contain;
 }
 
-/* ---------- Projects ---------- */
+/* projects */
 .badge,
 .kind {
   display: inline-block;
@@ -457,6 +468,7 @@ main:focus {
   line-height: 1.2;
 }
 
+/* the big naadnetra card */
 .featured {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -509,10 +521,14 @@ main:focus {
   border: 1px solid var(--border);
 }
 
+/* the project cards. JS adds cols-2 or cols-3 depending on how many projects there are (see Projects.js) */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+}
+.grid-container.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .project-card {
   display: flex;
@@ -527,9 +543,11 @@ main:focus {
   transform: translateY(-6px);
   border-color: var(--accent);
 }
+/* starting position before the card fades in */
 .project-card.reveal:not(.is-visible) {
   transform: translateY(22px);
 }
+/* every image gets the same 16:10 box and is cropped to fit (object-fit: cover), so nothing gets stretched */
 .image-container {
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -552,6 +570,41 @@ main:focus {
   padding: 1.5rem;
   flex: 1;
   align-items: flex-start;
+}
+
+/* leftover card when theres an odd number of projects.
+   takes the full row but goes side by side so the image still looks normal */
+.project-card.wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+.project-card.wide .image-container {
+  position: relative;
+  flex: 0 0 40%;
+  aspect-ratio: auto;
+  min-height: 15rem;
+}
+.project-card.wide .project-image {
+  position: absolute;
+  inset: 0;
+}
+.project-card.wide .content-container {
+  justify-content: center;
+  padding: 2rem 2.25rem;
+}
+/* tablet: wide card needs a bit more image + less padding, otherwise the image turns into a tall strip */
+@media (max-width: 900px) {
+  .project-card.wide .image-container {
+    flex-basis: 46%;
+    min-height: 12rem;
+  }
+  .project-card.wide .content-container {
+    padding: 1.5rem 1.6rem;
+    gap: 0.55rem;
+  }
+  .project-card.wide .project-description {
+    font-size: 1rem;
+  }
 }
 .content-container .project-title {
   font-size: 1.6rem;
@@ -589,7 +642,8 @@ main:focus {
   height: 1.1rem;
 }
 
-/* ---------- Contact ---------- */
+/* contact */
+/* the box around the contact section */
 .contact-card {
   display: grid;
   justify-items: center;
@@ -650,7 +704,7 @@ main:focus {
   background: rgba(110, 172, 218, 0.13);
 }
 
-/* ---------- Footer ---------- */
+/* footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -668,12 +722,12 @@ main:focus {
   text-decoration: none;
 }
 
-/* ---------- Responsive ---------- */
+/* responsive stuff below */
 .swipe-hint {
   display: none;
 }
 
-/* Tablet and below: stacked sections, slide-in menu, smaller type */
+/* tablet and below: everything stacks, menu slides in from the right, smaller text */
 @media (max-width: 900px) {
   :root {
     --header-h: 68px;
@@ -766,7 +820,7 @@ main:focus {
   }
 }
 
-/* Phones: compact profile-card hero, 2-column chips, swipeable project cards */
+/* phones */
 @media (max-width: 600px) {
   :root {
     --header-h: 60px;
@@ -791,7 +845,7 @@ main:focus {
     font-size: 1rem;
   }
 
-  /* Header */
+  /* header */
   .header {
     padding: 0 1rem;
   }
@@ -813,14 +867,14 @@ main:focus {
     padding: 0.5rem 1.4rem;
   }
 
-  /* Buttons */
+  /* buttons */
   .btn {
     font-size: 0.95rem;
     padding: 0.75rem 1rem;
     justify-content: center;
   }
 
-  /* Hero: small photo beside the name, then badge, intro and two buttons */
+  /* hero: small photo next to the name, badge + intro + buttons underneath */
   .home {
     min-height: auto;
     padding-top: calc(var(--header-h) + 2.5rem);
@@ -885,7 +939,7 @@ main:focus {
     gap: 0.75rem;
   }
 
-  /* About */
+  /* about */
   .about-grid {
     gap: 2.25rem;
   }
@@ -914,7 +968,7 @@ main:focus {
     font-size: 0.88rem;
   }
 
-  /* Skills: two tidy columns of chips */
+  /* skills: chips in 2 columns */
   .skill-row {
     padding: 1.1rem 0;
     gap: 0.7rem;
@@ -938,7 +992,7 @@ main:focus {
     height: 1.35rem;
   }
 
-  /* Projects */
+  /* projects: cards turn into a swipe row, the "swipe" hint shows up */
   .badge,
   .kind {
     font-size: 0.7rem;
@@ -1031,7 +1085,7 @@ main:focus {
     font-size: 0.92rem;
   }
 
-  /* Contact */
+  /* contact */
   .contact-card {
     padding: 2rem 1.1rem;
     gap: 1.1rem;
@@ -1063,7 +1117,7 @@ main:focus {
     height: 1.15rem;
   }
 
-  /* Footer */
+  /* footer */
   .footer {
     justify-content: center;
     text-align: center;
@@ -1072,7 +1126,7 @@ main:focus {
   }
 }
 
-/* Very small phones */
+/* really small phones */
 @media (max-width: 380px) {
   .status {
     font-size: 0.68rem;
@@ -1098,6 +1152,7 @@ main:focus {
   }
 }
 
+/* if someone has reduced motion turned on, switch the animations off */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

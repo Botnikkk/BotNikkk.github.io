@@ -12,9 +12,11 @@ const About = () => (
           {profile.about.map((p) => (
             <p key={p}>{p}</p>
           ))}
+          {/* personalNote is optional, empty = skipped */}
           {profile.personalNote && <p>{profile.personalNote}</p>}
         </div>
 
+        {/* small facts list beside the text */}
         <ul className="facts">
           <li>
             <IoSchool aria-hidden="true" />

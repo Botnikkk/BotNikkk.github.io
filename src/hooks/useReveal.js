@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-// Adds a fade-up reveal when an element scrolls into view.
-// Falls back to "visible" when IntersectionObserver is missing or the user prefers reduced motion.
+// fade-in when something scrolls into view.
+// if the browser cant do it (or reduced motion is on) just show it right away
 export default function useReveal() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -20,10 +20,10 @@ export default function useReveal() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect();
+          observer.disconnect(); // only needs to happen once
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 } // ~12% visible and it triggers
     );
     observer.observe(node);
     return () => observer.disconnect();

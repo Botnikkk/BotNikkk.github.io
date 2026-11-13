@@ -5,6 +5,7 @@ import { profile } from '../data';
 const Contact = () => {
   const [copied, setCopied] = useState(false);
 
+  // flip the button back from "Copied" after 2 seconds
   useEffect(() => {
     if (!copied) return undefined;
     const t = setTimeout(() => setCopied(false), 2000);
@@ -16,11 +17,12 @@ const Contact = () => {
       await navigator.clipboard.writeText(profile.email);
       setCopied(true);
     } catch (err) {
-      // Clipboard can be blocked; the address is still shown as plain text above.
+      // clipboard can get blocked, no big deal since the email is on the page anyway
       setCopied(false);
     }
   };
 
+  // subject line comes from data.js
   const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(profile.emailSubject)}`;
 
   return (
@@ -44,6 +46,7 @@ const Contact = () => {
               {copied ? 'Copied' : 'Copy email'}
             </button>
           </div>
+          {/* screen readers only, announces the copy */}
           <span className="sr-only" role="status" aria-live="polite">
             {copied ? 'Email address copied' : ''}
           </span>

@@ -14,7 +14,7 @@ const Header = () => {
   const [current, setCurrent] = useState('');
   const [scrolled, setScrolled] = useState(false);
 
-  // Highlight the nav link of the section currently in view.
+  // figures out which section is on screen so the right nav link lights up
   useEffect(() => {
     if (typeof IntersectionObserver === 'undefined') return undefined;
     const ids = [...links.map((l) => l.id), 'contact'];
@@ -24,7 +24,7 @@ const Header = () => {
           if (e.isIntersecting) setCurrent(e.target.id);
         });
       },
-      { rootMargin: '-45% 0px -50% 0px' }
+      { rootMargin: '-45% 0px -50% 0px' } // only counts when the section is around the middle of the screen
     );
     ids.forEach((id) => {
       const el = document.getElementById(id);
@@ -33,6 +33,7 @@ const Header = () => {
     return () => observer.disconnect();
   }, []);
 
+  // header gets its background after a tiny bit of scrolling
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -40,7 +41,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Lock page scroll and allow Escape to close while the mobile menu is open.
+  // mobile menu: freeze the page behind it while its open, esc closes it
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
     const onKey = (e) => e.key === 'Escape' && setOpen(false);
@@ -51,6 +52,7 @@ const Header = () => {
     };
   }, [open]);
 
+  // used on every link so the menu closes after you tap one
   const close = () => setOpen(false);
 
   return (
@@ -71,6 +73,7 @@ const Header = () => {
             {l.label}
           </a>
         ))}
+        {/* contact link is styled like a button */}
         <a
           href="#contact"
           onClick={close}
@@ -81,6 +84,7 @@ const Header = () => {
         </a>
       </nav>
 
+      {/* hamburger, only visible on small screens */}
       <button
         type="button"
         className="menu-toggle"

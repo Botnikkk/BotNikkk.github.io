@@ -3,6 +3,7 @@ import { profile } from '../data';
 
 const Footer = () => (
   <footer className="footer">
+    {/* year updates itself */}
     <p>
       © {new Date().getFullYear()} {profile.name}
     </p>

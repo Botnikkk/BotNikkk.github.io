@@ -6,7 +6,9 @@ import pfp from '../images/pfp.webp';
 const Home = () => (
   <section id="home" className="home section">
     <div className="container hero">
+      {/* text on the left, photo on the right */}
       <div className="hero-text">
+        {/* the green dot + availability line */}
         <p className="status">
           <span className="status-dot" aria-hidden="true" />
           {profile.availability}

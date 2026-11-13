@@ -13,6 +13,7 @@ const Skills = () => (
             <ul className="skills-list">
               {group.items.map((skill) => (
                 <li key={skill.name} className="skillItem">
+                  {/* alt is empty on purpose, the name is right next to the icon */}
                   <img src={skill.img} alt="" width="28" height="28" loading="lazy" />
                   <span>{skill.name}</span>
                 </li>

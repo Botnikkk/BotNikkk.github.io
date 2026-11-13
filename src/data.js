@@ -1,4 +1,5 @@
-// All portfolio content lives here. Edit this file to update the site.
+// all the text/links/images for the site live in this file.
+// change stuff here, dont go digging through the components
 
 import javaIcon from './images/Skills/java.svg';
 import dartIcon from './images/Skills/dart.svg';
@@ -22,6 +23,7 @@ import naadnetraImg from './images/projects/naadnetra.webp';
 import cheenaImg from './images/projects/cheena-makeover.webp';
 import blackjackImg from './images/projects/blackjack.webp';
 import botImg from './images/projects/xp-bot.webp';
+import jarvisImg from './images/projects/jarvis.webp';
 
 export const profile = {
   name: 'Nikhil Chaudhary',
@@ -33,20 +35,24 @@ export const profile = {
   college: 'GGSIPU, Delhi',
   years: '2024 – 2028',
   location: 'Delhi, India',
-  availability: 'Open to internships & entry-level roles',
+  availability: 'Open to internships & entry-level roles', // shows in the green badge in the hero
   about: [
     "I'm a B.Tech Information Technology student in Delhi, working mostly in Flutter, React and Python.",
     "So far I've built a Flutter + FastAPI app that detects AI-cloned voices during phone calls, a React website for a paying client, a Discord bot in Python and a blackjack game in plain JavaScript.",
   ],
+  // optional, set to '' to hide it
   personalNote: 'Outside of coding, I enjoy gaming and reading about game development. Major driving force behind my coding is the desire to build things that are useful and fun.',
   email: 'b.nikk.chd@gmail.com',
+  // pre-filled subject for the "Email me" button
   emailSubject: 'Connect from portfolio!',
   linkedin: 'https://www.linkedin.com/in/nikhil-chaudhary-85a275269',
   github: 'https://github.com/Botnikkk',
+  // google drive link, swap it if the resume gets updated
   resume:
     'https://drive.google.com/file/d/1V2KO4CrylBIMpUEPP-ntxJzj09akL8P6/view?usp=sharing',
 };
 
+// skills section: each group is a row, icons are imported at the top
 export const skillGroups = [
   {
     title: 'Languages',
@@ -87,6 +93,7 @@ export const skillGroups = [
   },
 ];
 
+// the big project at the top (Naadnetra)
 export const featuredProject = {
   title: 'Naadnetra',
   tagline: 'Real-time detection of AI-cloned voices during phone calls',
@@ -100,6 +107,10 @@ export const featuredProject = {
   tags: ['Flutter', 'Dart', 'Python', 'FastAPI', 'WebRTC'],
 };
 
+// the smaller project cards, just add another object to the array and the grid sorts itself out.
+// link: null = no "Live" button.
+// imgPosition is optional, picks which part of the screenshot stays visible when its cropped
+// ('center', 'top', '50% 30%'...), default is top
 export const projects = [
   {
     title: 'Cheena Makeover',
@@ -111,6 +122,18 @@ export const projects = [
       'A live website built for a real client: responsive design, gallery showcases and contact links, with content managed through Sanity.',
     hardPart: '',
     tags: ['React', 'React Motion', 'Sanity API'],
+  },
+  {
+    title: 'J.A.R.V.I.S',
+    kind: 'Instagram bot',
+    img: jarvisImg,
+    imgPosition: 'center',
+    github: 'https://github.com/Botnikkk/J.A.R.V.I.S',
+    link: null,
+    description:
+      'An Instagram utility bot that tracks engagement metrics and handles automated interactions, built with Python and the Instagram API.',
+    hardPart: '',
+    tags: ['Python', 'Instagram API', 'JSON Handling'],
   },
   {
     title: 'BlackJack Game',

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 beforeAll(() => {
-  // jsdom has no IntersectionObserver / matchMedia
+  // jsdom doesnt have these two so just fake them
   window.IntersectionObserver = class {
     observe() {}
     unobserve() {}
@@ -18,6 +18,6 @@ test('renders name, section headings and a single contact section', () => {
   expect(screen.getByRole('heading', { level: 2, name: /^skills$/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { level: 2, name: /^projects$/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { level: 2, name: /get in touch/i })).toBeInTheDocument();
-  // The email address is shown once, in the contact section.
+  // email should only show up once on the whole page (contact section)
   expect(screen.getAllByText('b.nikk.chd@gmail.com')).toHaveLength(1);
 });
