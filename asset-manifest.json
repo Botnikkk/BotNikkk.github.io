@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.93dc0a1a.css",
-    "main.js": "/static/js/main.f47ed18e.js",
+    "main.css": "/static/css/main.64c03f02.css",
+    "main.js": "/static/js/main.347060dd.js",
     "static/js/453.5652f7a4.chunk.js": "/static/js/453.5652f7a4.chunk.js",
     "static/media/naadnetra.webp": "/static/media/naadnetra.503976fa5d7b31195ef0.webp",
+    "static/media/jarvis.webp": "/static/media/jarvis.d74e0af1f4e5cc916f04.webp",
     "static/media/blackjack.webp": "/static/media/blackjack.43f51ebf4b9537c08eff.webp",
     "static/media/cheena-makeover.webp": "/static/media/cheena-makeover.306571a847465a952867.webp",
     "static/media/pfp.webp": "/static/media/pfp.70267cd06f68b5add576.webp",
@@ -26,12 +27,12 @@
     "static/media/flutter.svg": "/static/media/flutter.83219c099347619051f3aa0fa0e2108e.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.36591e878879c49ba04200651dc53796.svg",
     "static/media/react-motion.svg": "/static/media/react-motion.c62b429c6fb27aa3be46d5a22ea9bc57.svg",
-    "main.93dc0a1a.css.map": "/static/css/main.93dc0a1a.css.map",
-    "main.f47ed18e.js.map": "/static/js/main.f47ed18e.js.map",
+    "main.64c03f02.css.map": "/static/css/main.64c03f02.css.map",
+    "main.347060dd.js.map": "/static/js/main.347060dd.js.map",
     "453.5652f7a4.chunk.js.map": "/static/js/453.5652f7a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93dc0a1a.css",
-    "static/js/main.f47ed18e.js"
+    "static/css/main.64c03f02.css",
+    "static/js/main.347060dd.js"
   ]
 }
